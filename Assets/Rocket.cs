@@ -23,18 +23,18 @@ public class Rocket : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.Space))
         {
-            rigidBody.AddRelativeForce(Vector3.up); //This will move upward... Along Y , 
-            //This take the  component of rocket and make Relative force(along a certain direction) 
-            //and Vector3 contain the value of x,y,z direction of Rocket.
-            // Make Sure the mass must be small so that it could fly...
+            rigidBody.AddRelativeForce(Vector3.up); /*This will move upward... Along Y , 
+                                                    *This take the  component of rocket and make Relative force(along a certain direction) 
+                                                    *and Vector3 contain the value of x,y,z direction of Rocket.
+                                                    * Make Sure the mass must be small so that it could fly...*/
         }
 
         if (Input.GetKey(KeyCode.A))
         {
-            print("Rotate Left");
+            transform.Rotate(Vector3.forward);
         }else if (Input.GetKey(KeyCode.D))
         {
-            print("Rotate Right");
+            transform.Rotate(-Vector3.forward);
         }
     }
 }
